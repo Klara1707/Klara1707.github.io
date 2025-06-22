@@ -87,8 +87,8 @@ img {
    height: 200px;
    border-radius: 60%;
    object-fit: cover;
-}
-
+ }
+      
 .desktop-nav {
    background-color: var(--action);
    color: var(--white);
@@ -108,6 +108,8 @@ img {
    align-items: center;
    border-radius: var(--space-small);
    padding: var(--space-large);
+   padding-left: var(--space-xl);
+   padding-right: var(--space-small);
    gap: var(--space-medium);
    margin: 0 var(--space-small);
 }
@@ -132,7 +134,7 @@ img {
    margin: 0 var(--space-small);
    border-radius: 4px;
    margin-top: var(--space-small);
-      color: white;
+   color: white;
 }
 
 .socials-icon {
@@ -234,14 +236,22 @@ a:hover {
    color: burlywood
 }
 
-p {
+.p {
    text-wrap: balance;
    align-items: center;
+   position: absolute;
 }
 
 :before,
 :after {
    box-sizing: inherit;
+}
+
+div{ 
+  width:2500px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;    
 }
 
 h1,
@@ -265,4 +275,20 @@ ol,
 ul {
    margin: 0;
    padding: 0;
+}
+.text {
+  position: relative;
+  left: 0; /* Default position */
+}
+
+@media (max-width: 768px) {
+  .text {
+    left: 20px; /* Move text when screen width is smaller */
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    left: 50px; /* Move text further for smaller screens */
+  }
 }
