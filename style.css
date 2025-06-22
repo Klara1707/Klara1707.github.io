@@ -82,6 +82,9 @@ footer {
    align-content: space-between;
 }
 
+.hero h1 {
+    white-space: nowrap; /* Default: Keep words on the same line */
+  }
 img {
    width: 200px;
    height: 200px;
@@ -292,3 +295,9 @@ ul {
     left: 50px; /* Move text further for smaller screens */
   }
 }
+@media (max-width: 768px) {
+    .hero h1 {
+      white-space: normal; /* Allow words to wrap */
+      text-align: center;  /* Optional: Center-align for smaller screens */
+    }
+  }
